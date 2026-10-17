@@ -21,6 +21,46 @@ TP5DPBO2526C2/                 <- repository GitHub (public)
 ├── db_people.sql              <- skrip database (tabel + data awal)
 └── README.md
 ```
+# TP5DPBO2526C2 PeopleData – Rumah Sakit Psikologi
+
+Saya Moch Fadillah Pratama dengan NIM 2506968 mengerjakan Tugas Praktikum 5 dalam mata kuliah Desain Pemrograman Berorientasi Objek untuk keberkahan-Nya maka saya tidak akan melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
+
+Aplikasi desktop berbasis **Java Swing** untuk mengelola data pasien dan tenaga di sebuah Rumah Sakit Psikologi. Proyek ini adalah lanjutan TP 4 dan dikerjakan sebagai **Tugas Praktikum 5 – Java Swing GUI: Database dan Back-End** pada mata kuliah **Desain dan Pemrograman Berorientasi Objek (DPBO)**.
+
+Pada TP 4 data disimpan sementara di `ArrayList`. Pada TP 5 seluruh data disimpan di **database MySQL (`db_people`)** lewat **JDBC**, sehingga data tetap ada walaupun aplikasi ditutup. Seluruh operasi **CRUD** (Create, Read, Update, Delete) terhubung langsung ke database, dilengkapi **konfirmasi sebelum hapus** dan **validasi input**.
+
+---
+
+## Daftar Isi
+
+- [Struktur Folder](#struktur-folder)
+- [Desain Program](#desain-program)
+- [Desain Database](#desain-database)
+- [Penjelasan Class](#penjelasan-class)
+- [Alur Program](#alur-program)
+- [Validasi & Error Handling](#validasi--error-handling)
+- [Cara Menjalankan](#cara-menjalankan)
+- [Dokumentasi Program Berjalan](#dokumentasi-program-berjalan)
+- [Perubahan dari TP 4](#perubahan-dari-tp-4)
+
+---
+
+## Struktur Folder
+
+```
+TP5DPBO2526C2/                 <- repository GitHub (public)
+├── PeopleData/                <- folder project (IntelliJ)
+│   ├── src/
+│   │   ├── Database.java
+│   │   ├── Person.java
+│   │   ├── PeopleMenu.java
+│   │   └── PeopleMenu.form
+│   └── lib/
+│       └── mysql-connector-j-xxx.jar
+├── Dokumentasi/               <- screenshot yang ditampilkan di README
+├── db_people.sql              <- skrip database (tabel + data awal)
+└── README.md
+```
 
 ## Desain Program
 
@@ -186,25 +226,95 @@ Semua error memakai `JOptionPane.showMessageDialog(..., JOptionPane.ERROR_MESSAG
 
 ## Dokumentasi Program Berjalan
 
-Dokumentasi berupa video yang memperlihatkan seluruh fitur program. Salinan berkasnya juga disimpan di folder `Dokumentasi/`.
+> Berkas dokumentasi disimpan di folder `Dokumentasi/`.
 
-https://github.com/TP5DPBO2526C2/Dokumentasi/Video.mp4 
+### 1. Tampilan awal (Read dari database)
 
-Jika video tidak tampil, buka berkas: [Dokumentasi/TP5-PeopleData.mp4](Dokumentasi/TP5-PeopleData.mp4)
+![Tampilan awal](Dokumentasi/01-read.png)
 
-Isi video (urut sesuai yang ditampilkan):
+### 2. Create – menambah data
 
-| No | Bagian                           | Yang ditampilkan                                                                  |
-| -- | -------------------------------- | --------------------------------------------------------------------------------- |
-| 1  | Read                             | Program dibuka, data di tabel sama dengan isi tabel `person` di HeidiSQL          |
-| 2  | Create                           | Mengisi form lalu Add, data muncul di tabel dan di database                       |
-| 3  | Update                           | Memilih baris, mengubah isian lalu Update, perubahan terlihat di tabel dan database |
-| 4  | Delete                           | Memilih baris, Delete, konfirmasi **No** (data tetap) lalu **Yes** (data terhapus) |
-| 5  | Error: kolom kosong saat Insert  | Dialog error saat ID/Nama/Tahun Lahir kosong                                      |
-| 6  | Error: kolom kosong saat Update  | Dialog error saat kolom dikosongkan pada mode Update                              |
-| 7  | Error: ID sudah ada saat Insert  | Dialog error saat menambah data dengan ID yang sudah ada (contoh: `P001`)         |
-| 8  | Error: dropdown belum dipilih    | Dialog error saat Kategori/MBTI masih `-- Pilih ... --`                           |
-| 9  | Data permanen                    | Program ditutup lalu dibuka lagi, data hasil Create/Update masih ada              |
+#### Mengisi data
+
+![Create](Dokumentasi/02-create-01.png)
+
+#### Data berhasil ditambahkan
+
+![Create](Dokumentasi/02-create-02.png)
+
+#### Tabel setelah ditambahkan
+
+![Create](Dokumentasi/02-create-03.png)
+
+#### Data tersimpan di database (HeidiSQL)
+
+![Create di database](Dokumentasi/02-create-04-db.png)
+
+### 3. Update – mengubah data
+
+#### Memilih data
+
+![Update](Dokumentasi/03-update-01.png)
+
+#### Mengubah isi data
+
+![Update](Dokumentasi/03-update-02.png)
+
+#### Data berhasil diubah
+
+![Update](Dokumentasi/03-update-03.png)
+
+#### Tabel setelah diubah
+
+![Update](Dokumentasi/03-update-04.png)
+
+#### Data berubah di database (HeidiSQL)
+
+![Update di database](Dokumentasi/03-update-05-db.png)
+
+### 4. Delete – menghapus data (dengan konfirmasi)
+
+#### Memilih data
+
+![Delete](Dokumentasi/04-delete-01.png)
+
+#### Mengonfirmasi penghapusan data
+
+![Delete](Dokumentasi/04-delete-02.png)
+
+#### Data berhasil dihapus
+
+![Delete](Dokumentasi/04-delete-03.png)
+
+#### Tabel setelah dihapus
+
+![Delete](Dokumentasi/04-delete-04.png)
+
+#### Data hilang dari database (HeidiSQL)
+
+![Delete di database](Dokumentasi/04-delete-05-db.png)
+
+### 5. Validasi input / error handling
+
+#### Error: kolom input kosong saat Insert
+
+![Error kosong insert](Dokumentasi/05-error-kosong-insert.png)
+
+#### Error: kolom input kosong saat Update
+
+![Error kosong update](Dokumentasi/05-error-kosong-update.png)
+
+#### Error: ID sudah ada saat Insert
+
+![Error ID ganda](Dokumentasi/05-error-id-ganda.png)
+
+#### Error: Kategori/MBTI belum dipilih
+
+![Error dropdown](Dokumentasi/05-error-dropdown.png)
+
+#### Error lainnya (Tahun Lahir bukan angka / di luar rentang)
+
+![Error tahun](Dokumentasi/05-error-tahun.png)
 
 ## Perubahan dari TP 4
 
