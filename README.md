@@ -21,47 +21,6 @@ TP5DPBO2526C2/                 <- repository GitHub (public)
 ├── db_people.sql              <- skrip database (tabel + data awal)
 └── README.md
 ```
-# TP5DPBO2526C2 PeopleData – Rumah Sakit Psikologi
-
-Saya Moch Fadillah Pratama dengan NIM 2506968 mengerjakan Tugas Praktikum 5 dalam mata kuliah Desain Pemrograman Berorientasi Objek untuk keberkahan-Nya maka saya tidak akan melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
-
-Aplikasi desktop berbasis **Java Swing** untuk mengelola data pasien dan tenaga di sebuah Rumah Sakit Psikologi. Proyek ini adalah lanjutan TP 4 dan dikerjakan sebagai **Tugas Praktikum 5 – Java Swing GUI: Database dan Back-End** pada mata kuliah **Desain dan Pemrograman Berorientasi Objek (DPBO)**.
-
-Pada TP 4 data disimpan sementara di `ArrayList`. Pada TP 5 seluruh data disimpan di **database MySQL (`db_people`)** lewat **JDBC**, sehingga data tetap ada walaupun aplikasi ditutup. Seluruh operasi **CRUD** (Create, Read, Update, Delete) terhubung langsung ke database, dilengkapi **konfirmasi sebelum hapus** dan **validasi input**.
-
----
-
-## Daftar Isi
-
-- [Struktur Folder](#struktur-folder)
-- [Desain Program](#desain-program)
-- [Desain Database](#desain-database)
-- [Penjelasan Class](#penjelasan-class)
-- [Alur Program](#alur-program)
-- [Validasi & Error Handling](#validasi--error-handling)
-- [Cara Menjalankan](#cara-menjalankan)
-- [Dokumentasi Program Berjalan](#dokumentasi-program-berjalan)
-- [Perubahan dari TP 4](#perubahan-dari-tp-4)
-
----
-
-## Struktur Folder
-
-```
-TP5DPBO2526C2/                 <- repository GitHub (public)
-├── PeopleData/                <- folder project (IntelliJ)
-│   ├── src/
-│   │   ├── Database.java
-│   │   ├── Person.java
-│   │   ├── PeopleMenu.java
-│   │   └── PeopleMenu.form
-│   └── lib/
-│       └── mysql-connector-j-xxx.jar
-├── Dokumentasi/               <- screenshot yang ditampilkan di README
-├── db_people.sql              <- skrip database (tabel + data awal)
-└── README.md
-```
-
 ## Desain Program
 
 ### Tampilan (GUI)
