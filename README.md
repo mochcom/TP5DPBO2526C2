@@ -17,7 +17,7 @@ TP5DPBO2526C2/                 <- repository GitHub (public)
 │   ├── Person.java
 │   ├── PeopleMenu.java
 │   └── PeopleMenu.form
-├── Dokumentasi/               <- video dokumentasi program berjalan
+├── Dokumentasi/               <- dokumentasi program berjalan
 ├── db_people.sql              <- skrip database (tabel + data awal)
 └── README.md
 ```
