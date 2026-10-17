@@ -255,26 +255,59 @@ Semua error memakai `JOptionPane.showMessageDialog(..., JOptionPane.ERROR_MESSAG
 
 ### 5. Validasi input / error handling
 
-#### Error: kolom input kosong saat Insert
-
-![Error kosong insert](Dokumentasi/05-error-kosong-insert.png)
-
-#### Error: kolom input kosong saat Update
-
-![Error kosong update](Dokumentasi/05-error-kosong-update.png)
-
-#### Error: ID sudah ada saat Insert
-
-![Error ID ganda](Dokumentasi/05-error-id-ganda.png)
-
-#### Error: Kategori/MBTI belum dipilih
-
-![Error dropdown](Dokumentasi/05-error-dropdown.png)
-
-#### Error lainnya (Tahun Lahir bukan angka / di luar rentang)
-
-![Error tahun](Dokumentasi/05-error-tahun.png)
-
+#### 5.1 Insert: ID kosong
+ 
+Pesan: `ID tidak boleh kosong!`
+ 
+![Insert: ID kosong](Dokumentasi/05-error-02-insert-kosong-id.png)
+ 
+#### 5.2 Insert: Nama kosong
+ 
+Pesan: `Nama tidak boleh kosong!`
+ 
+![Insert: Nama kosong](Dokumentasi/05-error-03-insert-kosong-nama.png)
+ 
+#### 5.3 Insert: Tahun Lahir kosong
+ 
+Pesan: `Tahun Lahir tidak boleh kosong!`
+ 
+![Insert: Tahun Lahir kosong](Dokumentasi/05-error-04-insert-kosong-tahun.png)
+ 
+#### 5.4 Insert: Kategori belum dipilih
+ 
+Pesan: `Kategori belum dipilih!`
+ 
+![Insert: Kategori belum dipilih](Dokumentasi/05-error-05-insert-kosong-kategori.png)
+ 
+#### 5.5 Insert: MBTI belum dipilih
+ 
+Pesan: `MBTI belum dipilih!`
+ 
+![Insert: MBTI belum dipilih](Dokumentasi/05-error-06-insert-kosong-mbti.png)
+ 
+#### 5.6 Update: kolom dikosongkan
+ 
+Memilih satu baris, mengosongkan kolom, lalu menekan Update
+ 
+![Update: kolom dikosongkan](Dokumentasi/05-error-07-update-kosong.png)
+ 
+#### 5.7 Insert: ID sudah ada
+ 
+Pesan: `ID "..." sudah digunakan! Gunakan ID yang berbeda.`
+ 
+![Insert: ID sudah ada](Dokumentasi/05-error-08-id-sama.png)
+ 
+#### 5.8 Insert: Tahun Lahir berupa huruf
+ 
+Pesan: `Tahun Lahir harus berupa angka! Contoh: 1998`
+ 
+![Insert: Tahun Lahir berupa huruf](Dokumentasi/05-error-09-tahun-huruf.png)
+ 
+#### 5.09 Insert: Tahun Lahir lebih dari tahun sekarang (2026)
+ 
+Pesan: `Tahun Lahir harus di antara 1900 dan 2026!`
+ 
+![Insert: Tahun Lahir lebih dari tahun sekarang (2026)](Dokumentasi/05-error-10-tahun-lebih.png)
 ## Perubahan dari TP 4
 
 | Aspek               | TP 4                              | TP 5                                                          |
